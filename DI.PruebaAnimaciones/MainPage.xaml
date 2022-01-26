@@ -1,0 +1,52 @@
+﻿<Page
+    x:Class="DI.PruebaAnimaciones.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:DI.PruebaAnimaciones"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Page.Resources>
+
+        <Storyboard x:Name="miStoryboard">
+            <PointAnimation EnableDependentAnimation="True" RepeatBehavior="Forever"
+                AutoReverse="True" Storyboard.TargetName="notaVerde"
+                Storyboard.TargetProperty="Center"
+                From="800,200" To="200,400" Duration="0:0:2"/>
+            <DoubleAnimation EnableDependentAnimation="True" Storyboard.TargetName="notaVerde" Storyboard.TargetProperty="Width"
+                 From="100" To="200" AutoReverse="True" Duration="0:0:2" RepeatBehavior="Forever"/>
+            <DoubleAnimation EnableDependentAnimation="True" Storyboard.TargetName="notaVerde" Storyboard.TargetProperty="Height"
+                 From="100" To="200" AutoReverse="True" Duration="0:0:2" RepeatBehavior="Forever"/>
+        </Storyboard>
+        
+
+    </Page.Resources>
+
+    <Canvas>
+
+        <Rectangle Canvas.Left="800" Canvas.Top="730" x:Name="MiRectangulo" Width="160" Height="160">
+            <Rectangle.Fill>
+                <ImageBrush  ImageSource="/Assets/base.png">
+                </ImageBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle Canvas.Left="800" Canvas.Top="300" x:Name="notaVerde" Width="50" Height="50">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="/Assets\botonVerde.png">
+                </ImageBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle x:Name="notaRoja" Canvas.Left="880" Canvas.Top="300"  Width="50" Height="50">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="/Assets\botonRojo.png">
+                </ImageBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+
+    </Canvas>
+
+
+</Page>
