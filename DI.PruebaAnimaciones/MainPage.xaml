@@ -11,40 +11,45 @@
     <Page.Resources>
 
         <Storyboard x:Name="miStoryboard">
-            <PointAnimation EnableDependentAnimation="True" RepeatBehavior="Forever"
-                AutoReverse="True" Storyboard.TargetName="notaVerde"
-                Storyboard.TargetProperty="Center"
-                From="800,200" To="200,400" Duration="0:0:2"/>
+            <DoubleAnimation RepeatBehavior="Forever" AutoReverse="True" Storyboard.TargetProperty="(Ellipse.RenderTransform).(CompositeTransform.TranslateY)"
+                             To="730" Storyboard.TargetName="notaVerde" Duration="0:0:2"> </DoubleAnimation>
             <DoubleAnimation EnableDependentAnimation="True" Storyboard.TargetName="notaVerde" Storyboard.TargetProperty="Width"
-                 From="100" To="200" AutoReverse="True" Duration="0:0:2" RepeatBehavior="Forever"/>
+                 From="100" To="200" AutoReverse="True" Duration="0:0:2.1" RepeatBehavior="Forever"/>
             <DoubleAnimation EnableDependentAnimation="True" Storyboard.TargetName="notaVerde" Storyboard.TargetProperty="Height"
                  From="100" To="200" AutoReverse="True" Duration="0:0:2" RepeatBehavior="Forever"/>
         </Storyboard>
-        
+
 
     </Page.Resources>
 
     <Canvas>
-
-        <Rectangle Canvas.Left="800" Canvas.Top="730" x:Name="MiRectangulo" Width="160" Height="160">
-            <Rectangle.Fill>
+        <Ellipse x:Name="MiRectangulo" Width="229" Height="223" Canvas.Left="800" Canvas.Top="820">
+            <Ellipse.Fill>
                 <ImageBrush  ImageSource="/Assets/base.png">
                 </ImageBrush>
-            </Rectangle.Fill>
-        </Rectangle>
+            </Ellipse.Fill>
+        </Ellipse>
 
-        <Rectangle Canvas.Left="800" Canvas.Top="300" x:Name="notaVerde" Width="50" Height="50">
-            <Rectangle.Fill>
+
+        <Ellipse  Canvas.Left="800" Canvas.Top="300" x:Name="notaVerde" Width="50" Height="50">
+            <Ellipse.RenderTransform>
+                <CompositeTransform TranslateX="0"/>
+            </Ellipse.RenderTransform>
+            <Ellipse.Fill>
                 <ImageBrush ImageSource="/Assets\botonVerde.png">
                 </ImageBrush>
-            </Rectangle.Fill>
-        </Rectangle>
-        <Rectangle x:Name="notaRoja" Canvas.Left="880" Canvas.Top="300"  Width="50" Height="50">
-            <Rectangle.Fill>
+            </Ellipse.Fill>
+        </Ellipse>
+        <Ellipse x:Name="notaRoja" Canvas.Left="880" Canvas.Top="300"  Width="50" Height="50">
+            <Ellipse.RenderTransform>
+                <CompositeTransform TranslateX="0">
+                </CompositeTransform>
+            </Ellipse.RenderTransform>
+            <Ellipse.Fill>
                 <ImageBrush ImageSource="/Assets\botonRojo.png">
                 </ImageBrush>
-            </Rectangle.Fill>
-        </Rectangle>
+            </Ellipse.Fill>
+        </Ellipse>
 
     </Canvas>
 

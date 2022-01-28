@@ -25,6 +25,13 @@ namespace DI.PruebaAnimaciones
         public MainPage()
         {
             this.InitializeComponent();
+            miStoryboard.Begin();
+            
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+           
         }
     }
 }
