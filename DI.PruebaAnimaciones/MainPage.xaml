@@ -6,39 +6,29 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+	>
 
+	
     <Page.Resources>
 
-        <Storyboard x:Name="miStoryboard">
-            <DoubleAnimation RepeatBehavior="Forever" AutoReverse="True" Storyboard.TargetProperty="(Ellipse.RenderTransform).(CompositeTransform.TranslateY)"
-                             To="730" Storyboard.TargetName="notaVerde" Duration="0:0:2"> </DoubleAnimation>
-            <DoubleAnimation EnableDependentAnimation="True" Storyboard.TargetName="notaVerde" Storyboard.TargetProperty="Width"
-                 From="100" To="200" AutoReverse="True" Duration="0:0:2.1" RepeatBehavior="Forever"/>
-            <DoubleAnimation EnableDependentAnimation="True" Storyboard.TargetName="notaVerde" Storyboard.TargetProperty="Height"
-                 From="100" To="200" AutoReverse="True" Duration="0:0:2" RepeatBehavior="Forever"/>
-        </Storyboard>
-
+      
 
     </Page.Resources>
 
     <Canvas>
-        <Ellipse x:Name="MiRectangulo" Width="229" Height="223" Canvas.Left="800" Canvas.Top="820">
+        <Ellipse Name="MiRectangulo"  Width="229" Height="223" Canvas.Left="800" Canvas.Top="820">
             <Ellipse.Fill>
                 <ImageBrush  ImageSource="/Assets/base.png">
-                </ImageBrush>
+                </ImageBrush> 
             </Ellipse.Fill>
         </Ellipse>
 
 
-        <Ellipse  Canvas.Left="800" Canvas.Top="300" x:Name="notaVerde" Width="50" Height="50">
+        <Ellipse   Canvas.Left="800" Canvas.Top="300" x:Name="notaVerde" Width="50" Height="50">
             <Ellipse.RenderTransform>
                 <CompositeTransform TranslateX="0"/>
             </Ellipse.RenderTransform>
-            <Ellipse.Fill>
-                <ImageBrush ImageSource="/Assets\botonVerde.png">
-                </ImageBrush>
-            </Ellipse.Fill>
         </Ellipse>
         <Ellipse x:Name="notaRoja" Canvas.Left="880" Canvas.Top="300"  Width="50" Height="50">
             <Ellipse.RenderTransform>
